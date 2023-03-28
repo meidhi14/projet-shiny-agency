@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import colors from "../../utils/style/colors";
+import logo from "../../assets/dark-logo.png";
 
 const StyledLink = styled(Link)`
   padding: 15px;
@@ -13,13 +14,16 @@ const StyledLink = styled(Link)`
 `;
 function Header() {
   return (
-    <nav>
-      <StyledLink to="/">Accueil</StyledLink>
-      <StyledLink to="/survey/1" $isFullLink>
-        Faire le test
-      </StyledLink>
-      <StyledLink to="/freelances">Freelances</StyledLink>
-    </nav>
+    <div>
+      <img src="{logo}" />
+      <nav>
+        <StyledLink to="/">Accueil</StyledLink>
+        <StyledLink to="/survey/1" $isFullLink>
+          Faire le test
+        </StyledLink>
+        <StyledLink to="/freelances">Freelances</StyledLink>
+      </nav>
+    </div>
   );
 }
 
